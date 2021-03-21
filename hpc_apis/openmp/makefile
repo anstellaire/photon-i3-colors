@@ -9,8 +9,8 @@ FLAGS   = -std=c++11 -O2 -fopenmp -Wall -Wextra
 # SOURCES #
 ###########
 
-HEADERS = matrix_dotproduct.hpp
-SOURCES = matrix_test.cpp
+HEADERS = mat_mult.hpp
+SOURCES = mat_mult_test.cpp
 EXEC    = exec
 
 #########
@@ -23,5 +23,5 @@ all: $(HEADERS) $(SOURCES)
 run: $(EXEC)
 	./$(EXEC)
 
-clean: 
+clean:
 	rm $(EXEC)

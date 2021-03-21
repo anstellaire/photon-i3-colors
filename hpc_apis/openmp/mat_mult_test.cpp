@@ -1,4 +1,4 @@
-#include "matrix_dotproduct.hpp"
+#include "mat_mult.hpp"
 
 #include <cstddef>
 #include <iostream>
@@ -34,12 +34,12 @@ int main() {
 
     // run serial
     double time_ser = utils::measure([&in1_view, &in2_view, &out_ser_view](){
-        alg::dotproduct_serial_naive{}(in1_view, in2_view, out_ser_view);
+        alg::mat_mult_serial_naive{}(in1_view, in2_view, out_ser_view);
     });
 
     // run parallel
     double time_par = utils::measure([&in1_view, &in2_view, &out_par_view](){
-        alg::dotproduct_parallel{}(in1_view, in2_view, out_par_view);
+        alg::mat_mult_parallel{}(in1_view, in2_view, out_par_view);
     });
 
     // results

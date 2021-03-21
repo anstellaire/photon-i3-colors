@@ -12,7 +12,7 @@ namespace alg {
 
     using utils::mat_view;
 
-    struct dotproduct_serial_naive {
+    struct mat_mult_serial_naive {
 
         template<typename T>
         // __attribute__((optimize("no-tree-vectorize"))) // gcc
@@ -41,7 +41,7 @@ namespace alg {
 
     };
 
-    struct dotproduct_parallel {
+    struct mat_mult_parallel {
 
         template<typename T>
         void process_tile(mat_view<T> const tile1, mat_view<T> const tile2, mat_view<T> out) {
